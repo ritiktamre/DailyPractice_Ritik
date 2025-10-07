@@ -1,7 +1,7 @@
-package stack;
+package SingleLinkedList;
 
 public class Employee {
-
+	
 	int id;
 	String name;
 	double salary;
@@ -50,75 +50,13 @@ public class Employee {
 	public void setNext(Employee next) {
 		this.next = next;
 	}
-	
-	
-	Employee top;
-	
-	public void push(Employee e)
-	{
-		e.next = top;
-		top = e;
-		
-		System.out.println("Id :"+e.id);
-		System.out.println("Name :"+e.name);
-		System.out.println("Salary :"+e.salary);
-		
-		
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", next=" + next + "]";
 	}
 	
-	public Employee pop()
-	{
-		if(top == null)
-		{
-			System.out.println("Stack is Empty");
-			return null; 
-		}
-		
-		Employee temp = top;
-		top = top.next;
-		temp.next = null;
-		
-		System.out.println("Id :"+temp.id);
-		System.out.println("Name :"+temp.name);
-		System.out.println("Salary :"+temp.salary);
-		System.out.println("Data Deleated");
-		return temp;
-		
-	}
 	
-	public Employee peek()
-	{
-		if(top == null)
-		{
-			return null;
-		}
-		
-		System.out.println("Id :"+top.id);
-		System.out.println("Name :"+top.name);
-		System.out.println("Salary :"+top.salary);
-		
-		return top;
-		
-	}
 	
-	public void display()
-	{
-		if(top == null)
-		{
-			System.out.println("Stack is Empty");
-		}
-		
-		Employee temp = top;
-		
-		while(temp != null ) {
-		System.out.println("Id :"+temp.id);
-		System.out.println("Name :"+temp.name);
-		System.out.println("Salary :"+temp.salary);
-		
-		
-		temp = temp.next;
-		System.out.println();
-	  }
-	}
 	
 }

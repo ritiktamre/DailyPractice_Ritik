@@ -1,17 +1,17 @@
 package SingleLinkedList;
 
-public class Node {
- 
+public class Ritik {
+
 	int id;
 	String name;
 	double salary;
-	Node next;
+	Ritik next;
 	
-	public Node() {
+	public Ritik() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Node(int id, String name, double salary) {
+	public Ritik(int id, String name, double salary) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -43,17 +43,17 @@ public class Node {
 		this.salary = salary;
 	}
 
-	public Node getNext() {
+	public Ritik getNext() {
 		return next;
 	}
 
-	public void setNext(Node next) {
+	public void setNext(Ritik next) {
 		this.next = next;
 	}
 
 	@Override
 	public String toString() {
-		return "Node [id=" + id + ", name=" + name + ", salary=" + salary + ", next=" + next + "]";
+		return "Ritik [id=" + id + ", name=" + name + ", salary=" + salary + ", next=" + next + "]";
 	}
 	
 	
